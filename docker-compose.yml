@@ -12,9 +12,16 @@ services:
         target: 443
         protocol: tcp
         mode: host
+      - published: 8080
+        target: 8080
+        protocol: tcp
+        mode: host
+
     networks:
       - traefik
     command:
+      - --api.dashboard=true
+      - --api.insecure=true
       - --entrypoints.web.address=:80
       - --entrypoints.web.http.redirections.entrypoint.to=websecure
       - --entrypoints.web.http.redirections.entrypoint.scheme=https
