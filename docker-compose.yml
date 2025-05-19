@@ -20,7 +20,8 @@ services:
       - --entrypoints.web.http.redirections.entrypoint.scheme=https
       - --entrypoints.websecure.address=:443
       - --providers.docker=true
-      - --providers.docker.swarmMode=true
+      - --providers.docker.endpoint=unix:///var/run/docker.sock
+      - --providers.docker.network=traefik
       - --providers.docker.exposedbydefault=false
       - --certificatesresolvers.myresolver.acme.httpchallenge=true
       - --certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web
