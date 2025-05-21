@@ -32,7 +32,7 @@ services:
       - --providers.swarm.network=traefik    
       - --certificatesresolvers.myresolver.acme.httpchallenge=true
       - --certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web
-      - --certificatesresolvers.myresolver.acme.email=you@example.com
+      - --certificatesresolvers.myresolver.acme.email=merqreal@protonmail.com
       - --certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
